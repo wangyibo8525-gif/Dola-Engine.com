@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dola Engine - กำลังเตรียมความพร้อม</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== หน้าจอดาวน์โหลดทรัพยากร ===== -->
+<div class="loaderScreen" id="loaderScreen">
+  <div class="loaderGear"></div>
+  <h2>กำลังดาวน์โหลดทรัพยากร...</h2>
+  <div class="progressBar">
+    <div class="progressFill" id="progressFill"></div>
+  </div>
+  <p id="loaderText">0%</p>
+</div>
+
+<!-- ===== หน้าเข้าสู่ระบบ/สมัคร ===== -->
+<div class="authPage" id="authPage" style="display:none;">
+<div class="authBox">
+<div class="authLogo">🔧</div>
+<h1>Dola Engine</h1>
+<p class="sub">เอนจินสร้างเกมในฝัน — เข้าสู่ระบบเพื่อเริ่มสร้างสรรค์ครับ</p>
+
+<div class="tabGroup">
+<button class="tabBtn active" onclick="showTab('login')">เข้าสู่ระบบ</button>
+<button class="tabBtn" onclick="showTab('register')">สมัครสมาชิก</button>
+</div>
+
+<div class="socialBtns">
+<button class="social google" onclick="alert('เข้าด้วย Google (สำหรับระบบจริงต้องติดตั้ง Firebase/อื่นๆ เพิ่ม)')">
+<span>🔵</span> เข้าด้วย Google
+</button>
+<button class="social fb" onclick="alert('เข้าด้วย Facebook (สำหรับระบบจริงต้องติดตั้ง Firebase/อื่นๆ เพิ่ม)')">
+<span>🔷</span> เข้าด้วย Facebook
+</button>
+</div>
+
+<div class="divider">หรือใช้อีเมลของคุณ</div>
+
+<form id="loginForm" class="formBlock active" onsubmit="loginEmail(event)">
+<input type="email" id="loginEmail" placeholder="อีเมล" required>
+<input type="password" id="loginPass" placeholder="รหัสผ่าน" required>
+<button type="submit" class="mainBtn">เข้าสู่ระบบ</button>
+</form>
+
+<form id="registerForm" class="formBlock" onsubmit="registerEmail(event)">
+<input type="text" id="regName" placeholder="ชื่อที่ใช้แสดง" required>
+<input type="email" id="regEmail" placeholder="อีเมล" required>
+<input type="password" id="regPass" placeholder="รหัสผ่าน (8 ตัวขึ้นไป)" minlength="8" required>
+<button type="submit" class="mainBtn">สมัครสมาชิก</button>
+</form>
+
+<p class="small">🔒 ข้อมูลถูกเข้ารหัส ปลอดภัยสูงสุดครับ</p>
+</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
