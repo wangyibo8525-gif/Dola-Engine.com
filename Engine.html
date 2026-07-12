@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dola Engine - ห้องทำงาน</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="enginePage">
+<header class="topBar">
+<div class="brand">🔧 Dola Engine</div>
+<div class="menuGroup">
+<span class="menuItem">ไฟล์</span>
+<span class="menuItem">แก้ไข</span>
+<span class="menuItem">ดูตัวอย่าง</span>
+<span class="menuItem">เผยแพร่</span>
+<span class="menuItem" onclick="toggleGuide()">📖 คู่มือการใช้งาน</span>
+</div>
+<div class="userArea">
+<span id="userName">ผู้ใช้งาน</span>
+<button class="logoutBtn" onclick="logout()">ออกจากระบบ</button>
+</div>
+</header>
+
+<aside class="sideLeft">
+<h4>📂 โครงการของฉัน</h4>
+<div class="projItem active">เกมผจญภัยใหม่</div>
+<div class="projItem">ด่านทดสอบความเร็ว</div>
+<button class="newProjBtn">+ สร้างโครงการใหม่</button>
+
+<h4>🛠️ เครื่องมือ</h4>
+<div class="toolItem active">🏗️ ฉาก/แผนที่</div>
+<div class="toolItem">👤 ตัวละคร</div>
+<div class="toolItem">⚔️ ไอเทม/สกิล</div>
+<div class="toolItem">⚙️ กฎ/ระบบเกม</div>
+<div class="toolItem">🎵 เสียง/เพลง</div>
+</aside>
+
+<main class="workArea">
+<div class="workHeader">
+<h2>ตัวแก้ไขฉาก — เกมผจญภัยใหม่</h2>
+<div class="workBtns">
+<button class="miniBtn">บันทึก</button>
+<button class="miniBtn">ทดลองเล่น</button>
+<button class="miniBtn primary">ส่งออกเกม</button>
+</div>
+</div>
+<div class="workCanvas">
+<div class="emptyHint">✨ พื้นที่ว่างสำหรับสร้างฉากและวางสิ่งของต่างๆ ครับ</div>
+</div>
+</main>
+
+<aside class="sideRight">
+<h4>📋 คุณสมบัติ</h4>
+<p class="hintText">เลือกวัตถุหรือพื้นที่เพื่อแก้ไขรายละเอียดครับ</p>
+</aside>
+
+<!-- คู่มือการใช้งาน -->
+<div class="guideOverlay" id="guideOverlay" onclick="toggleGuide()"></div>
+<div class="guideBox" id="guideBox">
+<div class="guideHead">
+<h3>📖 คู่มือเริ่มต้นใช้งาน Dola Engine</h3>
+<button class="closeBtn" onclick="toggleGuide()">✕</button>
+</div>
+<div class="guideContent">
+<div class="guideStep">
+<h4>1. สร้างโครงการใหม่</h4>
+<p>กดปุ่ม <b>"+ สร้างโครงการใหม่"</b> ที่แถบซ้าย ตั้งชื่อเกม แล้วเลือกขนาดหน้าจอครับ</p>
+</div>
+<div class="guideStep">
+<h4>2. สร้างฉากและแผนที่</h4>
+<p>เลือกเมนู <b>"🏗️ ฉาก/แผนที่"</b> ลากวางบล็อก พื้นดิน สิ่งกีดขวาง เพื่อออกแบบด่านครับ</p>
+</div>
+<div class="guideStep">
+<h4>3. เพิ่มตัวละครและไอเทม</h4>
+<p>เข้าเมนู <b>"👤 ตัวละคร"</b> สร้างผู้เล่น/ศัตรู และ <b>"⚔️ ไอเทม/สกิล"</b> วางของพิเศษครับ</p>
+</div>
+<div class="guideStep">
+<h4>4. ตั้งค่ากฎและความยาก</h4>
+<p>กำหนดแต้มชีวิต คะแนน เวลา ที่เมนู <b>"⚙️ กฎ/ระบบเกม"</b> ครับ</p>
+</div>
+<div class="guideStep">
+<h4>5. ทดลองเล่นและบันทึก</h4>
+<p>กด <b>"ทดลองเล่น"</b> เช็คความเรียบร้อย แล้วกด <b>"บันทึก"</b> เก็บงานครับ</p>
+</div>
+</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
